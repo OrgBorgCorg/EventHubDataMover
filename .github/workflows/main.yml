@@ -1,0 +1,54 @@
+name: Auto Merge Release → Main and Sync Master
+
+on:
+  push:
+    branches:
+      - release  # Trigger only when release gets a new commit
+
+permissions:
+  contents: write
+
+jobs:
+  merge_release_to_main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history
+
+      - name: Set up Git config
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Merge release into main (favor release changes)
+        run: |
+          git fetch origin
+          git checkout main
+          git merge origin/release -X theirs --no-edit || true
+          git push origin main
+
+  move_master_back:
+    needs: merge_release_to_main
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Needed to get 2 commits for HEAD~1
+
+      - name: Set up Git config
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Reset master to one commit behind main
+        run: |
+          git fetch origin
+          git checkout main
+          PREV_COMMIT=$(git rev-parse HEAD~1)
+          git checkout -B master $PREV_COMMIT
+          git push origin master --force
