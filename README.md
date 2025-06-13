@@ -19,10 +19,12 @@ An application to migrate data from one eventhub to another in real time and dep
 - After selecting publish create a new profile in order to **push to ACR**
 - Select the Second option, i.e, **Docker Container Registry**
   ![Container Reg](./images/dockercontainerreg.png)
+<br>
 - And then proceed to choose **Azure Container Registry**.
   ![ACR](./images/ACR.png)
+<br>
 - Which automatically searches, the Azure account linked with microsoft account signed in, for any registry instances and brings it up.
-- Select the required registry and proceed to choose the .NET SDK build and not the docker desktop option.
+- Select the required registry and proceed to select the .NET SDK build and not the docker desktop option.
   ![select registry](./images/selectregistry.png)
   ![select .net sdk](./images/sdknotdock.png)
 
