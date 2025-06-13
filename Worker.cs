@@ -15,7 +15,7 @@ namespace EventHubDataMover
 
         // === Replace with your actual values ===
         private const string sourceConnectionString = "<ENTER_YOUR_CONNECTION_STRING>";
-        private const string sourceEventHubName = "<ENTER_YOURS>";
+        private const string sourceEventHubName = "<ENTER_YOUR_SRC_EH_NAME>";
 
         private const string targetConnectionString = "<ENTER_YOURS>";
         private const string targetEventHubName = "<ENTER_YOURS>";
