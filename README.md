@@ -2,7 +2,7 @@
 
 An application to migrate data from one eventhub to another in real time and deployed to AKS
 
-# Once the .NET Application is setup:
+## Once the .NET Application is setup:
 
 ### Publish the app
 
@@ -76,7 +76,7 @@ spec:
       targetPort: 80
 
 ```
-
+---
 - In order to deploy the app by making use of above created yaml we can use the following commands
 
 ```bash
@@ -115,5 +115,3 @@ kubectl logs <podname>
 ```bash
 kubectl rollout restart deployment eventhubdatamover
 ```
-
----
