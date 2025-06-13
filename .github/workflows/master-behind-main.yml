@@ -1,0 +1,31 @@
+name: Sync master to 1 commit behind main
+
+on:
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  rollback_master:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2  # Get at least the last 2 commits
+
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+
+      - name: Get previous commit of main
+        id: prev
+        run: |
+          PREV_COMMIT=$(git rev-parse HEAD~1)
+          echo "prev_commit=$PREV_COMMIT" >> $GITHUB_OUTPUT
+
+      - name: Force push previous main commit to master
+        run: |
+          git fetch origin
+          git checkout -B master ${{ steps.prev.outputs.prev_commit }}
+          git push origin master --force
