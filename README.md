@@ -90,7 +90,7 @@ kubectl get service my-app-service(or whatever depending on your app-deployment.
 
 ### Checking the logs
 
-- We can obtain the logs of the deployed application in two ways. Either the **cli** or ny using the **gui/website**.
+- We can obtain the logs of the deployed application in two ways. Either via the **cli** or by using the **gui/website**.
 
 - In order to check the logs via the cli
 
