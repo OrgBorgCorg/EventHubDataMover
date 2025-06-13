@@ -3,6 +3,9 @@ name: Promote release to main
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+  
 jobs:
   promote:
     runs-on: ubuntu-latest
