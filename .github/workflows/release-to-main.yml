@@ -1,7 +1,7 @@
 name: Promote release to main
 
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
 
 jobs:
   promote:
@@ -15,8 +15,8 @@ jobs:
 
       - name: Set up Git user
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.name "rdx40"
+          git config --global user.email "ivanjaison@gmail.com"
 
       - name: Merge release into main
         run: |
