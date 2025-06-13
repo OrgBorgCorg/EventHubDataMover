@@ -22,5 +22,5 @@ jobs:
         run: |
           git fetch origin main
           git checkout main
-          git merge origin/release --no-ff -m "Merge release into main [bot]"
+          git merge origin/release
           git push origin main
