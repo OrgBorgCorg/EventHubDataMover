@@ -5,7 +5,7 @@ on:
 
 permissions:
   contents: write
-  
+
 jobs:
   promote:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
 
       - name: Merge release into main
         run: |
-          git fetch origin main
+          git fetch origin
           git checkout main
-          git merge origin/release
+          git merge origin/release --allow-unrelated-histories
           git push origin main
