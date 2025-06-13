@@ -3,13 +3,19 @@ name: Auto Merge Release → Main and Sync Master
 on:
   push:
     branches:
-      - release  # Trigger only when release gets a new commit
+      - release
+    pull_request:
+      branhces:
+        - release
+      types:
+        - closed
 
 permissions:
   contents: write
 
 jobs:
   merge_release_to_main:
+    if: github.event.pull_request.merged == true || github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
