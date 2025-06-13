@@ -14,7 +14,7 @@ namespace EventHubDataMover
         private readonly ILogger<Worker> _logger;
 
         // === Replace with your actual values ===
-        private const string sourceConnectionString = "<ENTER_YOURS>";
+        private const string sourceConnectionString = "<ENTER_YOUR_CONNECTION_STRING>";
         private const string sourceEventHubName = "<ENTER_YOURS>";
 
         private const string targetConnectionString = "<ENTER_YOURS>";
