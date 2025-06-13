@@ -1,0 +1,48 @@
+# Build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+project.lock.json
+project.assets.json
+project.nuget.cache
+*.nuget.props
+*.nuget.targets
+
+# Test results
+TestResults/
+
+# Publish outputs
+publish/
+*.db
+
+# dotCover
+.idea/.dotCover
+
+# Ignore secrets
+appsettings.Development.json
+
+
+*.cache
