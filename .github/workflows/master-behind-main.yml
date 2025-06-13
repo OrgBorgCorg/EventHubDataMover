@@ -1,7 +1,7 @@
 name: Sync master to 1 commit behind main
 
 on:
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:
 
 jobs:
   rollback_master:
@@ -15,8 +15,8 @@ jobs:
 
       - name: Set up Git user
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.name "rdx40"
+          git config --global user.email "ivanjaison@gmail.com"
 
       - name: Get previous commit of main
         id: prev
