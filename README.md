@@ -120,4 +120,6 @@ kubectl rollout restart deployment eventhubdatamover
 ---
 
 
-Push from non privileged user
+Dis da bombo priveleged user
+
+
