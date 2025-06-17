@@ -117,4 +117,3 @@ kubectl rollout restart deployment eventhubdatamover
 ```
 ---
 
-eflksda 
