@@ -116,7 +116,4 @@ kubectl logs <podname>
 kubectl rollout restart deployment eventhubdatamover
 ```
 
-i---ewrwef
-ewf
-wef
 ---
