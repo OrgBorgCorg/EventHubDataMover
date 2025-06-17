@@ -1,8 +1,7 @@
 name: Auto Branch Sync
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - release  # Trigger only when PRs into `release` are merged
 
