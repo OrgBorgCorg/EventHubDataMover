@@ -115,5 +115,4 @@ kubectl logs <podname>
 ```bash
 kubectl rollout restart deployment eventhubdatamover
 ```
-wefsdf
 ---
