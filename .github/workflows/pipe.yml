@@ -23,15 +23,15 @@ jobs:
           git config user.name "rdx40"
           git config user.email "ivanjaison@gmail.com"
 
-      - name: Sync release to main
-        run: |
-          git fetch origin
-          git checkout release
-          git push origin release:main --force
-
       - name: Sync main to master
         run: |
           git fetch origin
           git checkout main
           git pull origin main
           git push origin main:master --force
+      
+      - name: Sync release to main
+        run: |
+          git fetch origin
+          git checkout release
+          git push origin release:main --force
