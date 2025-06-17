@@ -118,5 +118,5 @@ kubectl rollout restart deployment eventhubdatamover
 ```
 
 ---
-Ivan J Madathil
-Ashwani
+
+Dis da bombo priveleged user
