@@ -17,6 +17,7 @@ jobs:
         with:
           ref: main
           token: ${{ secrets.GH_PAT }}
+          persist-credentials: true
 
       - name: Set up Git
         run: |
