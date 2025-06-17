@@ -116,3 +116,5 @@ kubectl logs <podname>
 kubectl rollout restart deployment eventhubdatamover
 ```
 ---
+w
+dlskmeklmf
