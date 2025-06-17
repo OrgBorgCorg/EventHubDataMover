@@ -106,7 +106,8 @@ kubectl logs <podname>
 
 ---
 
-### For maintaing sync 
+### For maintaing sync
+
 - Now whenever a change occurs we would usually trigger/activate a pipeline
 - That would rebuild the image and maintain sync with AKS
 - But in this case without an RBAC a pipeline cannot be maintainer
@@ -115,6 +116,9 @@ kubectl logs <podname>
 ```bash
 kubectl rollout restart deployment eventhubdatamover
 ```
+
 ---
+
 w
 dlskmeklmf
+Ivan
