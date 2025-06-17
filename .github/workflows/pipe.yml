@@ -29,14 +29,8 @@ jobs:
           git fetch origin
           git checkout main
           git push origin main:master --force
-
-      - name: Force push main to release
-        run: |
-          git fetch origin
-          git checkout main
-          git push origin main:release --force
-
-      - name: Force push release back to main (optional)
+          
+      - name: Force push release back to main
         run: |
           git fetch origin
           git checkout release
