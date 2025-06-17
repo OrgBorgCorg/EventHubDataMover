@@ -20,8 +20,8 @@ jobs:
 
       - name: Set up Git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "rdx40"
+          git config user.email "ivanjaison@gmail.com"
 
       - name: Push main to master
         run: |
