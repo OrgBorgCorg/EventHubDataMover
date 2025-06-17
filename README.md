@@ -119,4 +119,7 @@ kubectl rollout restart deployment eventhubdatamover
 
 ---
 
+
 Dis da bombo priveleged user
+
+
