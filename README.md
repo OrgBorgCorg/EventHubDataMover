@@ -118,7 +118,3 @@ kubectl rollout restart deployment eventhubdatamover
 ```
 
 ---
-
-w
-dlskmeklmf
-Ivan
